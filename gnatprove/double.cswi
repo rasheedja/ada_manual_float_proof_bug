@@ -1,0 +1,9 @@
+20190617205720
+-c
+-x
+ada
+-gnatA
+-g
+-O2
+-gnatc
+-gnates=/home/junaid/Research/git/ada/ada_manual_float_proof_bug/gnatprove/c9bfaadf.tmp

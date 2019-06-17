@@ -1,0 +1,234 @@
+{
+  "spark": [
+    {
+      "name": "Double",
+      "sloc": [
+        {
+          "file": "double.ads",
+          "line": 1
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "Double.Double",
+      "sloc": [
+        {
+          "file": "double.ads",
+          "line": 4
+        }
+      ],
+      "spark": "all"
+    }
+  ],
+  "flow": [
+  ],
+  "proof": [
+    {
+      "file": "double.adb",
+      "line": 5,
+      "col": 9,
+      "rule": "VC_FP_OVERFLOW_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "Double.Double",
+        "sloc": [
+          {
+            "file": "double.ads",
+            "line": 4
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 3257,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "double.adb",
+      "check_line": 5,
+      "check_col": 9,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "double.ads",
+      "line": 9,
+      "col": 12,
+      "rule": "VC_FP_OVERFLOW_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "Double.Double",
+        "sloc": [
+          {
+            "file": "double.ads",
+            "line": 4
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 4781,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "double.ads",
+      "check_line": 9,
+      "check_col": 12,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "double.ads",
+      "line": 9,
+      "col": 10,
+      "rule": "VC_POSTCONDITION",
+      "severity": "medium",
+      "entity": {
+        "name": "Double.Double",
+        "sloc": [
+          {
+            "file": "double.ads",
+            "line": 4
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Unknown (sat)",
+              "steps": 4899,
+              "time": 3.00000000000000E-02
+            },
+            "CVC4_CE": {
+              "result": "Unknown (sat)",
+              "steps": 5538,
+              "time": 0
+            },
+            "Z3": {
+              "result": "Unknown (sat)",
+              "steps": 46012,
+              "time": 0
+            },
+            "altergo": {
+              "result": "Timeout",
+              "steps": -1,
+              "time": 1
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "double.ads",
+      "check_line": 9,
+      "check_col": 10,
+      "cntexmp": {
+        "double.adb": {
+          "5": [
+            {
+              "name": "Double'Result",
+              "value": "3.9062502E+0",
+              "kind": "variable"
+            }
+          ]
+        },
+        "double.ads": {
+          "4": [
+            {
+              "name": "X",
+              "value": "1.9531251E+0",
+              "kind": "variable"
+            }
+          ],
+          "9": [
+            {
+              "name": "Double'Result",
+              "value": "3.9062502E+0",
+              "kind": "variable"
+            },
+            {
+              "name": "X",
+              "value": "1.9531251E+0",
+              "kind": "variable"
+            }
+          ]
+        }
+      },
+      "msg_id": 0,
+      "how_proved": "prover"
+    }
+  ],
+  "assumptions": [
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "Double.Double",
+          "sloc": [
+            {
+              "file": "double.ads",
+              "line": 4
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "Double",
+          "sloc": [
+            {
+              "file": "double.ads",
+              "line": 1
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "timings": {
+    "marking": 8.29999989946373E-05,
+    "globals (basic)": 1.04999999166466E-04,
+    "globals/properties (advanced)": 1.01999998150859E-04,
+    "flow analysis": 5.15000021550804E-04,
+    "codepeer results": 3.00000010611257E-06,
+    "init_why_sections": 4.07999992603436E-04,
+    "translation of standard": 2.46499991044402E-03,
+    "translation of compilation unit": 6.18999998550862E-04,
+    "proof": 2.12946891784668E+00
+  }
+}

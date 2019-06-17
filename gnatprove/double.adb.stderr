@@ -1,0 +1,1 @@
+double.ads:9:10: medium: postcondition might fail, cannot prove X + X /= Double'result (e.g. when Double'Result = 3.9062502E+0 and X = 1.9531251E+0)[#0]
